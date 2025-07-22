@@ -16,6 +16,22 @@ def SumaNnumerosNa(n):
     else:
         return n*SumaNnumerosNa(n-1)
 
+def fibonacci(n):
+    if n == 0:
+        return 0
+    elif n == 1:
+        return 1
+    else:
+        return fibonacci(n-1) + fibonacci(n-2)
+
+def contarLetra(palabra,letra):
+    if len(palabra)==0:
+        return 0
+    elif palabra[0]==letra:
+        return 1+contarLetra(palabra[1:],letra)
+    else:
+        return contarLetra(palabra[1:],letra)
+
 def Menu():
     opcion = 0
 
@@ -43,9 +59,13 @@ def Menu():
                 print(f"la suma de los primeros numeros naturales es: {SumaNnumerosNa(n)}")
 
             elif opcion == 3:
-                print("")
+                n=int(input("\nIngrese un numero: "))
+                print(f"el resultado de la secuancia es: {fibonacci(n)}")
+
             elif opcion == 4:
-                print("")
+                palabra=input("\nIngrese una palabra: ")
+                letra=input("\nIngrese una letra para buscar: ")
+                print(f"la letra {letra} aparece {contarLetra(palabra,letra)} en la palabra {palabra}")
             elif opcion == 5:
                 print("")
             elif opcion == 6:
