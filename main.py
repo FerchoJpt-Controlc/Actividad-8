@@ -70,7 +70,7 @@ def Menu():
 
             elif opcion == 4:
                 palabra=input("\nIngrese una palabra: ")
-                letra=input("\nIngrese una letra para buscar: ")
+                letra=input("Ingrese una letra para buscar: ")
                 print(f"la letra {letra} aparece {contarLetra(palabra,letra)} en la palabra {palabra}")
             elif opcion == 5:
                 texto=input("\nIngrese un texto: ")
@@ -78,17 +78,17 @@ def Menu():
                 print(f"la cadena de texto es: {cadenaInvertida}")
             elif opcion == 6:
                 base=int(input("\nIngrese la base: "))
-                exponente=int(input("\nIngrese el exponente: "))
+                exponente=int(input("Ingrese el exponente: "))
                 print(potenciacion(base, exponente))
             elif opcion == 7:
-                print("")
+                print("\nAdios regrewse promto CHAUUU...")
             else:
-                print("Opción inválida, vuelva a intentar")
+                print("\nOpción inválida, vuelva a intentar")
         else:
-            print("Error: ingreso de datos no numéricos")
+            print("\nError: ingreso de datos no numéricos")
             opcion = 0
 
         if opcion != 7:
-            input("Presione ENTER para continuar...")
+            input("\nPresione ENTER para continuar...")
 
 Menu()
