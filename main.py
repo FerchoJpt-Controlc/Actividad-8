@@ -32,6 +32,12 @@ def contarLetra(palabra,letra):
     else:
         return contarLetra(palabra[1:],letra)
 
+def invertir(cadena):
+    if len(cadena)==0:
+        return ""
+    else:
+        return invertir(cadena[1:]+cadena[0])
+
 def Menu():
     opcion = 0
 
@@ -67,7 +73,9 @@ def Menu():
                 letra=input("\nIngrese una letra para buscar: ")
                 print(f"la letra {letra} aparece {contarLetra(palabra,letra)} en la palabra {palabra}")
             elif opcion == 5:
-                print("")
+                texto=input("\nIngrese un texto: ")
+                cadenaInvertida = invertir(texto)
+                print(f"la cadena de texto es: {cadenaInvertida}")
             elif opcion == 6:
                 base=int(input("\nIngrese la base: "))
                 exponente=int(input("\nIngrese el exponente: "))
