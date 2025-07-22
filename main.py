@@ -10,6 +10,12 @@ def potenciacion(base, exponente):
     else:
         return base*potenciacion(base, exponente-1)
 
+def SumaNnumerosNa(n):
+    if n ==0:
+        return 1
+    else:
+        return n*SumaNnumerosNa(n-1)
+
 def Menu():
     opcion = 0
 
@@ -33,7 +39,9 @@ def Menu():
                 print(factorial(n))
 
             elif opcion == 2:
-                print("")
+                n=int(input("\nIngrese un numero: "))
+                print(f"la suma de los primeros numeros naturales es: {SumaNnumerosNa(n)}")
+
             elif opcion == 3:
                 print("")
             elif opcion == 4:
